@@ -15,7 +15,7 @@ export class LandingPageComponent {
   public handleClick = () => {
     this.isLoading = true;
     setTimeout(()=>{
-      this.router.navigate(['/algo']);
+      this.router.navigate(['/home']);
     },3000)
   }
 }
