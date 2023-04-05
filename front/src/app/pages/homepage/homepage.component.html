@@ -1,5 +1,11 @@
 <div class="home">
-    <app-navbar></app-navbar>
+    <app-navbar
+        [handleActive]="handleActive"
+        [active]="active"
+    ></app-navbar>
+    <app-menu
+        [active]="active"
+    ></app-menu>
     <!-- <Navbar/>
     <Filter dispatch={dispatch} state={state}/>
     <Games dispatch={dispatch} state={state}/> -->

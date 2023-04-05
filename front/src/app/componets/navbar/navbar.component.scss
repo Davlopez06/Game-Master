@@ -1,0 +1,32 @@
+.navbar {
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(143, 94, 37) 0%, rgb(251, 244, 161) 50%, rgb(143, 94, 37) 100%);
+    justify-content: center;
+    display: flex;
+    position: relative;
+
+    &-logo {
+        max-width: 110px;
+        margin: 0;
+        content: url('../../../img/logoblack.png');
+        // background-size: contain; /* Ajuste de tamaño */
+        // background-repeat: no-repeat; /* Evita la repetición de la imagen */
+        // background-position: center; /* Centra la imagen */
+    }
+
+    &-menu {
+        position: absolute;
+        top: 2%;
+        left: 1%;
+        content: url('../../../img/menu.png');
+        max-width: 30px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &-active {
+        opacity: 0.5;
+    }
+}

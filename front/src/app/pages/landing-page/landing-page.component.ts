@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,16 +6,17 @@ import { Router } from '@angular/router';
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss']
 })
-export class LandingPageComponent {
-
-  public isLoading : boolean = false;
+export class LandingPageComponent implements OnInit {
 
   constructor(private router : Router){}
 
-  public handleClick = () => {
-    this.isLoading = true;
+  ngOnInit(): void {
     setTimeout(()=>{
-      this.router.navigate(['/home']);
-    },3000)
+      this.handleClick();
+    },5000)
+  }
+
+  public handleClick = () => {
+    this.router.navigate(['/home']);
   }
 }

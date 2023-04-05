@@ -1,0 +1,23 @@
+.menu {
+    max-width: 500px;
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(to right, rgb(143, 94, 37) 0%, rgb(251, 244, 161) 50%, rgb(143, 94, 37) 100%);
+    transform: translateX(-100%);
+    transition: transform 1s;
+    display: flex;
+    justify-content: center;
+
+    &-active {
+        transform: translateX(0);
+    }
+
+    &-input {
+        border: none;
+        border-radius: 5px;
+        margin: 10px 0;
+        height: 15px;
+        width: 90%;
+        max-width: 250px;
+    }
+}

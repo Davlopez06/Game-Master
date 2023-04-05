@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NavbarComponent } from './componets/navbar/navbar.component';
+import { MenuComponent } from './componets/menu/menu.component';
+import { StatesService } from './states.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,12 +16,14 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
     LandingPageComponent,
     HomepageComponent,
     NavbarComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule 
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [StatesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

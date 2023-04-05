@@ -1,3 +1,10 @@
 <div class="navbar">
-    <img src="" alt="">
+    <img class="navbar-logo" alt="logo">
+    <img 
+        class="navbar-menu" 
+        alt="menu" 
+        (click)="handleActive()"
+        [ngClass]="{
+            'navbar-active' : active
+        }">
 </div>

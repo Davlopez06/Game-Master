@@ -1,0 +1,14 @@
+<div 
+    class="menu"
+    [ngClass]="{
+        'menu-active' : active
+    }"
+>
+    <input 
+        class="menu-input"
+        type="text" 
+        placeholder="Buscar"
+        [(ngModel)]="name" 
+        (ngModelChange)="handlleOnChange()"
+        >
+</div>
