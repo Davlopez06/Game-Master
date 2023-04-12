@@ -1,12 +1,22 @@
+@keyframes shine {
+    to {
+      background-position-x: -200%;
+    }
+  }
+
 .menu {
-    max-width: 500px;
+    max-width: max-content;
     width: 100%;
-    height: 500px;
+    height: max-content;
     background-image: linear-gradient(to right, rgb(143, 94, 37) 0%, rgb(251, 244, 161) 50%, rgb(143, 94, 37) 100%);
     transform: translateX(-100%);
     transition: transform 1s;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
 
     &-active {
         transform: translateX(0);
@@ -15,9 +25,46 @@
     &-input {
         border: none;
         border-radius: 5px;
-        margin: 10px 0;
-        height: 15px;
+        margin: 10px 5px;
+        height: 20px;
         width: 90%;
         max-width: 250px;
     }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-sort,
+    &-filter {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px;
+
+        button {
+            background: transparent;
+            width: 90%;
+            max-width: 250px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin-bottom: 5px;
+
+            &:hover {
+                background: linear-gradient(to right, rgb(143, 94, 37) 0%, rgb(251, 244, 161) 50%, rgb(143, 94, 37) 100%);
+            }
+        }
+    }
+
+    &-skeleton {
+        width: 90%;
+        max-width: 250px;
+        margin-bottom: 5px;
+        height: 19px;
+        background: linear-gradient(110deg, rgb(143, 94, 37) 0%, rgb(251, 244, 161) 50%, rgb(143, 94, 37) 100%);
+        border-radius: 5px;
+        background-size: 200% 650%;
+        animation: 1.5s shine linear infinite;
+    }
+ 
 }

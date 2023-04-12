@@ -1,0 +1,36 @@
+<div class="container">
+    <img class="image" src="{{image}}" alt="">
+    <p class="name">{{name}}</p>
+    <div class="rating">
+        <span 
+            class='star'
+            [ngClass]="{
+                'active' : rating >= 1
+            }"
+            >★</span>
+        <span 
+            class="star"
+            [ngClass]="{
+                'active' : rating >= 2
+            }"
+            >★</span>
+        <span 
+            class="star"
+            [ngClass]="{
+                'active' : rating >= 3
+            }"
+            >★</span>
+        <span 
+            class="star"
+            [ngClass]="{
+                'active' : rating >= 4
+            }"
+            >★</span>
+        <span 
+            class="star"
+            [ngClass]="{
+                'active' : rating >= 5
+            }"
+            >★</span>
+      </div>
+</div>

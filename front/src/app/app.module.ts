@@ -9,6 +9,8 @@ import { NavbarComponent } from './componets/navbar/navbar.component';
 import { MenuComponent } from './componets/menu/menu.component';
 import { StatesService } from './states.service';
 import { FormsModule } from '@angular/forms';
+import { CardsComponent } from './componets/cards/cards.component';
+import { CardComponent } from './componets/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { FormsModule } from '@angular/forms';
     HomepageComponent,
     NavbarComponent,
     MenuComponent,
+    CardsComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,

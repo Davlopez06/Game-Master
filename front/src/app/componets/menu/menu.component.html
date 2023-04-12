@@ -10,5 +10,22 @@
         placeholder="Buscar"
         [(ngModel)]="name" 
         (ngModelChange)="handlleOnChange()"
-        >
+    >
+    <div class="menu-sort">
+        <span>Sorts</span>
+        <button>A-Z</button>
+        <button>Z-A</button>
+        <button>1-5</button>
+        <button>5-1</button>
+    </div>
+
+    <div class="menu-filter">
+        <span>Filters</span>
+        <div class="menu-content" *ngIf="types.length !== 0">
+            <button *ngFor="let type of types">{{type}}</button>
+        </div>
+        <div class="menu-content" *ngIf="types.length === 0">
+            <div class="menu-skeleton" *ngFor="let index of [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]"></div>
+        </div>
+    </div>
 </div>
